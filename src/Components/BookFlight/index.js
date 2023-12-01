@@ -21,28 +21,7 @@ const BookFlight = () => {
   const [errors, updateErrors] = useState({});
   const [serverMessage, setServerMessage] = useState({ error: false, msg: "" });
   const [valid, setValid] = useState(false);
-  const [flights, setFlights] = useState([
-    {
-      Time_of_Arrival: "2023-05-02 10:00:00",
-      Time_of_Departure: "2023-05-02 15:00:00",
-      destination: "DEL",
-      fare: 190,
-      origin: "LA",
-      route_id: "R02",
-      schedule_id: 3,
-      tickets_left: 50,
-    },
-    {
-      Time_of_Arrival: "2023-05-02 10:00:00",
-      Time_of_Departure: "2023-05-02 12:00:00",
-      destination: "DEL",
-      fare: 100,
-      origin: "LA",
-      route_id: "R02",
-      schedule_id: 3,
-      tickets_left: 50,
-    },
-  ]);
+  const [flights, setFlights] = useState([]);
   const putData = (event) => {
     const { name, value } = event.target;
     updateData({ ...data, [name]: value });
