@@ -46,7 +46,7 @@ function App() {
               exact={true}
               element={<BookFlight />}
             ></Route>
-            <Route path="/book/:id" exact={true} element={<Details />}></Route>
+            <Route path="/book/*" exact={true} element={<Details />}></Route>
 
             <Route
               index

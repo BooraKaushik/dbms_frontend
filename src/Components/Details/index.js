@@ -7,7 +7,7 @@ import { html2pdf } from "html2pdf.js";
 
 const Details = () => {
   const navigate = useNavigate();
-  const flight = useSelector((state) => state.Details);
+  const flight = useSelector((state) => state.Details.data);
   const [start, setStart] = useState(true);
   const [serverMessage, setServerMessage] = useState();
 
@@ -15,6 +15,7 @@ const Details = () => {
     if (start) {
       setStart(false);
       if (flight.dataPresent || !localStorage.getItem("USER_EMAIL")) {
+        console.log();
         navigate("/bookflight");
       }
     }
@@ -27,7 +28,7 @@ const Details = () => {
     return formattedDate;
   };
   const serverCall = async () => {
-    const response = await axios.get(`${API_URL}/book-flight`, {
+    const response = await axios.post(`${API_URL}/book-flight`, {
       schedule_id: flight.schedule_id,
       user_email: localStorage.getItem("USER_EMAIL"),
     });
