@@ -66,7 +66,7 @@ const BookFlight = () => {
 
   return (
     <>
-      <div className="mx-auto my-5 p-5 wd-signup-container">
+      <div id="pdf-container" className="mx-auto my-5 p-5 wd-signup-container">
         {serverMessage.error && (
           <div className="alert alert-warning">{serverMessage.msg}</div>
         )}
