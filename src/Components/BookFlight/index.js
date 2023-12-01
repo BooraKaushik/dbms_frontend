@@ -213,7 +213,7 @@ const BookFlight = () => {
                         type: "UPDATE",
                         transfer: flight,
                       });
-                      navigate(`/book/${flight.schedule_id}`);
+                      navigate(`/book`);
                     }}
                   >
                     {">"}
