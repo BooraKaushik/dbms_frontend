@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = process.env.BACKEND_API || "http://localhost:4300/api";
+const API_URL = process.env.BACKEND_API || "http://127.0.0.1:5000/api";
 
 const LOGIN_URL = `${API_URL}/login`;
 
