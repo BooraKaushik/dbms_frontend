@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LogedIn from "./Components/LogedIn";
 import LoginComponent from "./Components/Login";
 import SignupComponent from "./Components/Signup";
+import BookFlight from "./Components/BookFlight";
 
 const store = createStore(
   combineReducers({
@@ -36,6 +37,11 @@ function App() {
                   <SignupComponent />
                 </LogedIn>
               }
+            ></Route>
+            <Route
+              path="/bookflight"
+              exact={true}
+              element={<BookFlight />}
             ></Route>
 
             <Route

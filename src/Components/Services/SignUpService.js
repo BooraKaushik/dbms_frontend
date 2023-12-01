@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const API_URL = process.env.REACT_APP_API_SARK || "http://localhost:4300/api";
+export const API_URL =
+  process.env.REACT_APP_API_SARK || "http://localhost:4300/api";
 
 const SIGNUP_URL = `${API_URL}/register`;
 
