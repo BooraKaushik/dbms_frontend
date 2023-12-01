@@ -82,10 +82,6 @@ const SignupComponent = () => {
     const { name, value } = event.target;
     updateData({ ...data, [name]: value });
   };
-  const putAddressData = (event) => {
-    const { name, value } = event.target;
-    updateData({ ...data, address: { ...data.address, [name]: value } });
-  };
   const dataSubmit = (event) => {
     event.preventDefault();
     updateErrors(validation(data));
