@@ -7,7 +7,11 @@ const LOGIN_URL = `${API_URL}/login`;
 export const loginService = async (login) => {
   const loginInfo = await axios.post(LOGIN_URL, login);
   if (loginInfo.data.success) {
-    localStorage.setItem("LoggedIn", JSON.stringify(loginInfo.data.userData));
+    localStorage.setItem(
+      "LoggedIn",
+      loginInfo.data.is_staff ? "staff" : "general"
+    );
+    localStorage.setItem("USER_EMAIL", login.email);
   }
   return loginInfo.data;
 };

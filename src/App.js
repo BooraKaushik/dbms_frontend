@@ -8,10 +8,13 @@ import LogedIn from "./Components/LogedIn";
 import LoginComponent from "./Components/Login";
 import SignupComponent from "./Components/Signup";
 import BookFlight from "./Components/BookFlight";
+import Details from "./Components/Details";
+import DetailsReducer from "./Components/Reducers/DetailsReducer";
 
 const store = createStore(
   combineReducers({
     LogIn: LogInReducer,
+    Details: DetailsReducer,
   })
 );
 function App() {
@@ -43,6 +46,7 @@ function App() {
               exact={true}
               element={<BookFlight />}
             ></Route>
+            <Route path="/book/:id" exact={true} element={<Details />}></Route>
 
             <Route
               index

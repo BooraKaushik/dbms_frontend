@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import { API_URL } from "../Services/SignUpService";
 import axios from "axios";
 import { useNavigate } from "react-router";
+import { useDispatch } from "react-redux";
 
 const BookFlight = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const getCurrentDate = () => {
     const today = new Date();
@@ -206,7 +208,13 @@ const BookFlight = () => {
                 <div className="col-1">
                   <button
                     className="btn btn-primary rounded-pill "
-                    onClick={() => navigate(`/book/${flight.schedule_id}`)}
+                    onClick={() => {
+                      dispatch({
+                        type: "UPDATE",
+                        transfer: flight,
+                      });
+                      navigate(`/book/${flight.schedule_id}`);
+                    }}
                   >
                     {">"}
                   </button>
