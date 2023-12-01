@@ -90,7 +90,10 @@ const SignupComponent = () => {
 
   useEffect(() => {
     if (Object.keys(errors).length === 0 && valid) {
-      SignupAction(data).then((data) => {
+      SignupAction({
+        ...data,
+        name: data.firstName + " " + data.lastName,
+      }).then((data) => {
         if (data.success) {
           navigate("/login");
         } else {
