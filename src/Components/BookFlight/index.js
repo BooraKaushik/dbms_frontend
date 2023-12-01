@@ -21,7 +21,7 @@ const BookFlight = () => {
   const [errors, updateErrors] = useState({});
   const [serverMessage, setServerMessage] = useState({ error: false, msg: "" });
   const [valid, setValid] = useState(false);
-  const [flights, setFlights] = useState([]);
+  const [flights, setFlights] = useState();
   const putData = (event) => {
     const { name, value } = event.target;
     updateData({ ...data, [name]: value });
