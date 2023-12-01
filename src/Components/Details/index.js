@@ -33,12 +33,14 @@ const Details = () => {
       user_email: localStorage.getItem("USER_EMAIL"),
     });
     if (response.data.success === true) {
-      setServerMessage(
-        response.data.message +
+      setServerMessage({
+        error: false,
+        msg:
+          response.data.message +
           '  "BOOKING ID:   ' +
           response.data.booking_id +
-          '"'
-      );
+          '"',
+      });
       if (response.data.success) {
         printPageAsPDF();
       }
@@ -63,9 +65,12 @@ const Details = () => {
     html2pdf().from(element).set(pdfOptions).outputPdf();
   };
   return (
-    <>
-      {serverMessage && (
-        <div className="alert alert-success">{serverMessage}</div>
+    <div id="pdf-container">
+      {serverMessage && !serverMessage.error && (
+        <div className="alert alert-success">{serverMessage.msg}</div>
+      )}
+      {serverMessage && serverMessage.error && (
+        <div className="alert alert-warning">{serverMessage.msg}</div>
       )}
       <div className="mx-auto my-5 p-5 wd-signup-container">
         <div className="row">
@@ -138,7 +143,7 @@ const Details = () => {
           Book
         </button>
       </div>
-    </>
+    </div>
   );
 };
 export default Details;
