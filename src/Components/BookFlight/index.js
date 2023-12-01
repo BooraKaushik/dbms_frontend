@@ -50,7 +50,7 @@ const BookFlight = () => {
     if (Object.keys(errors).length === 0 && valid) {
       getDataAction(data).then((data) => {
         if (data.success) {
-          setFlights(data.message);
+          setFlights(data.flights);
         } else {
           setServerMessage({ error: true, msg: data?.message });
         }
@@ -58,7 +58,7 @@ const BookFlight = () => {
     }
   }, [errors, valid, data]);
   const getDataAction = async (data) => {
-    const response = await axios.get(`${API_URL}/flights`, data);
+    const response = await axios.post(`${API_URL}/flights`, data);
     return response.data;
   };
 
