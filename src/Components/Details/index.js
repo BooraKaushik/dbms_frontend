@@ -3,7 +3,7 @@ import { API_URL } from "../Services/SignUpService";
 import axios from "axios";
 import { useNavigate } from "react-router";
 import { useSelector } from "react-redux";
-import { html2pdf } from "html2pdf.js";
+import html2pdf from "html2pdf.js";
 
 const Details = () => {
   const navigate = useNavigate();
@@ -44,6 +44,11 @@ const Details = () => {
       if (response.data.success) {
         printPageAsPDF();
       }
+    } else {
+      setServerMessage({
+        error: false,
+        msg: response.data.message,
+      });
     }
   };
   const printPageAsPDF = () => {
