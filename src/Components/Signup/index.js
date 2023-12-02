@@ -64,16 +64,8 @@ const SignupComponent = () => {
     email: "",
     password: "",
     confirmPassword: "",
-    address: {
-      addressLine: "",
-      addressLine2: "",
-      city: "",
-      state: "",
-      zipcode: "",
-    },
     phone: "",
-    type: "Customer",
-    agreed: false,
+    city: "",
   });
   const [errors, updateErrors] = useState({});
   const [serverMessage, setServerMessage] = useState({ error: false, msg: "" });
@@ -146,6 +138,9 @@ const SignupComponent = () => {
       errors.phone = "Phone Number is Required";
     } else if (!regexpPhone.test(value.phone)) {
       errors.phone = "Phone Number is invalid";
+    }
+    if (!value.city) {
+      errors.city = "City is Required";
     }
     return errors;
   };
@@ -282,6 +277,18 @@ const SignupComponent = () => {
           />
           <label htmlFor="phone">Phone</label>
           <p className="text-danger">{errors.phone ? errors.phone : ""}</p>
+        </div>
+        <div className="form-floating my-3">
+          <input
+            type="text"
+            className={`form-control${errors.city ? " is-invalid" : ""}`}
+            id="City"
+            name="city"
+            value={data.city}
+            onChange={(event) => putData(event)}
+          />
+          <label htmlFor="City">City</label>
+          <p className="text-danger">{errors.city ? errors.city : ""}</p>
         </div>
 
         <div>

@@ -56,19 +56,18 @@ const Cancel = () => {
             setServerMessage({ error: true, msg: data?.message });
           }
         });
-        navigate("/bookflight");
+        updateCancel(false);
       } else if (reschedule) {
         cancelServerCall({
           booking_id: data.pnr,
           user_name: data.firstName + " " + data.lastName,
         }).then((data) => {
           if (data.success) {
-            setServerMessage({ error: true, msg: data?.message });
+            navigate("/bookflight");
           } else {
             setServerMessage({ error: true, msg: data?.message });
           }
         });
-        navigate("/bookflight");
       }
     }
   }, [errors, valid, data]);
