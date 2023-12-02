@@ -74,9 +74,7 @@ const BookFlight = () => {
           <div className="row">
             <div className="col-3">
               <input
-                className={`form-control${
-                  errors.firstName ? " is-invalid" : ""
-                }`}
+                className={`form-control${errors.src ? " is-invalid" : ""}`}
                 id="src"
                 name="src"
                 value={data.src}
@@ -88,9 +86,7 @@ const BookFlight = () => {
             </div>
             <div className="col-3">
               <input
-                className={`form-control${
-                  errors.firstName ? " is-invalid" : ""
-                }`}
+                className={`form-control${errors.dst ? " is-invalid" : ""}`}
                 id="dst"
                 name="dst"
                 value={data.dst}
@@ -102,9 +98,7 @@ const BookFlight = () => {
             </div>
             <div className="col-3">
               <input
-                className={`form-control${
-                  errors.firstName ? " is-invalid" : ""
-                }`}
+                className={`form-control${errors.date ? " is-invalid" : ""}`}
                 id="date"
                 name="date"
                 onChange={(event) => putData(event)}

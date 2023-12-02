@@ -10,6 +10,7 @@ import SignupComponent from "./Components/Signup";
 import BookFlight from "./Components/BookFlight";
 import Details from "./Components/Details";
 import DetailsReducer from "./Components/Reducers/DetailsReducer";
+import Cancel from "./Components/Cancel";
 
 const store = createStore(
   combineReducers({
@@ -47,6 +48,7 @@ function App() {
               element={<BookFlight />}
             ></Route>
             <Route path="/book/*" exact={true} element={<Details />}></Route>
+            <Route path="/cancel/*" exact={true} element={<Cancel />}></Route>
 
             <Route
               index
