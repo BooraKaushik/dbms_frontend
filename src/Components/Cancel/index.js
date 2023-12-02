@@ -125,7 +125,7 @@ const Cancel = () => {
                 className={`form-control${errors.pnr ? " is-invalid" : ""}`}
                 id="pnr"
                 name="pnr"
-                value={data.lastName}
+                value={data.pnr}
                 onChange={(event) => putData(event)}
                 type="text"
                 placeholder="Booking ID"
@@ -140,7 +140,7 @@ const Cancel = () => {
           <button
             className="btn btn-primary rounded-pill "
             onClick={(event) => {
-              updateCancel(true);
+              updateReschedule(true);
               dataSubmit(event);
             }}
           >
@@ -151,11 +151,11 @@ const Cancel = () => {
           <button
             className="btn btn-danger rounded-pill "
             onClick={(event) => {
-              updateReschedule(true);
+              updateCancel(true);
               dataSubmit(event);
             }}
           >
-            Reschedule
+            Cancel
           </button>
         </div>
       </div>
