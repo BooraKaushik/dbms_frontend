@@ -11,11 +11,15 @@ import BookFlight from "./Components/BookFlight";
 import Details from "./Components/Details";
 import DetailsReducer from "./Components/Reducers/DetailsReducer";
 import Cancel from "./Components/Cancel";
+import Schedule from "./Components/Schedule";
+import ScheduleReducer from "./Components/Reducers/ScheduleReducer";
+import ScheduleDetails from "./Components/ScheduleDetails";
 
 const store = createStore(
   combineReducers({
     LogIn: LogInReducer,
     Details: DetailsReducer,
+    Schedule: ScheduleReducer,
   })
 );
 function App() {
@@ -49,6 +53,16 @@ function App() {
             ></Route>
             <Route path="/book/*" exact={true} element={<Details />}></Route>
             <Route path="/cancel/*" exact={true} element={<Cancel />}></Route>
+            <Route
+              path="/schedule/*"
+              exact={true}
+              element={<Schedule />}
+            ></Route>
+            <Route
+              path="/scheduledetails"
+              exact={true}
+              element={<ScheduleDetails />}
+            ></Route>
 
             <Route
               index
