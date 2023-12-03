@@ -33,7 +33,7 @@ const LoginComponent = () => {
     if (Object.keys(errors).length === 0 && valid) {
       loginAction(dispatch, data).then((data) => {
         if (data.success) {
-          navigate("/");
+          navigate(data.is_staff ? "/schedule" : "/bookflight");
         } else {
           setLoginMessage({ error: true, msg: data.message });
           setValid(false);
