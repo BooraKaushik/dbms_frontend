@@ -188,7 +188,7 @@ const ScheduleDetails = () => {
           data-toggle="modal"
           data-target="#exampleModal"
         >
-          Reschedule
+          Update Schedule
         </button>
 
         <div
