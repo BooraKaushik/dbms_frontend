@@ -21,7 +21,7 @@ const Schedule = () => {
 
   useEffect(() => {
     getDataAction().then((data) => {
-      setFlights(data);
+      setFlights(data.available_schedules);
     });
   }, []);
   const getDataAction = async () => {
@@ -74,15 +74,15 @@ const Schedule = () => {
   }
   const addCall = async () => {
     const dept_time = formatDateToISOString(
-      new Date(schedule.Time_of_Departure)
+      new Date(schedule.dept_time)
     );
-    const arr_time = formatDateToISOString(new Date(schedule.Time_of_Arrival));
+    const arr_time = formatDateToISOString(new Date(schedule.arr_time));
     validation(schedule);
     if (Object.keys(er).length !== 0) {
       console.log(errors);
       return;
     }
-    const response = await axios.put(`${API_URL}/add-schedule`, {
+    const response = await axios.post(`${API_URL}/add-schedule`, {
       dept_time,
       arr_time,
       route_id: schedule.route_id,
@@ -95,7 +95,7 @@ const Schedule = () => {
         error: false,
         msg: response.data.message,
       });
-      updateRefresh((ref) => !ref);
+      navigate("/schedule");
     } else {
       setServerMessage({
         error: false,
