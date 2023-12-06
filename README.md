@@ -1,70 +1,134 @@
-# Getting Started with Create React App
+# Airlines Database Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Group Name: BooraKSaiduH
 
-## Available Scripts
+### Team Members: Hephzibah Saidu, Boora Kaushik
 
-In the project directory, you can run:
+## Overview
 
-### `npm start`
+The Airlines Database Management System is designed to efficiently manage airline operations, including flight scheduling, passenger bookings, and staff management. This README provides instructions for setting up and running the system.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technical Specifications
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Database Type:** SQL (MySQL)
+- **Backend:** Python Flask for API endpoints
+- **Frontend:** React Pages
+- **Database Connection:** SQL Connector
+- **Dependencies:** PrettyTable, PyMySQL
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Download the Project:**
 
-### `npm run build`
+   - Clone or download the project zip file to the local directory.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Install MySQL:**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   - Download and install MySQL on your system.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Extract Files:**
 
-### `npm run eject`
+   - Extract the downloaded project zip file.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. **Install Backend Dependencies:**
+   - Open the terminal, and move into backend directory and run the following commands:
+     ```
+     pip install prettytable
+     pip install pymysql
+     ```
+5. **Install Frontend Dependencies:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   - Open the terminal, move into frontend directory and run the following command:
+     ```
+     npm install
+     ```
+     make sure you have node.js installed on your system.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+6. **Database Setup:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   - Run the SQL files (`project.sql`) in MySQL Workbench or terminal to create the database, procedures, triggers, and insert data.
 
-## Learn More
+7. **Run the Backend Application:**
+   - Navigate to the project root directory in the terminal and move into backend directory.
+   - Run the command:
+     ```
+     python3 app.py
+     ```
+8. **Run the Frontend Application:**
+   - Navigate to the project root directory in the terminal and move into frontend directory.
+   - Run the command:
+     ```
+     npm start
+     ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## System Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Passenger Functionalities:
 
-### Code Splitting
+- **Registration:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  - New passengers can register by providing necessary details.
 
-### Analyzing the Bundle Size
+- **Login:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+  - Existing passengers can log in using their email and password.
 
-### Making a Progressive Web App
+- **Booking a Ticket:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+  - Passengers can view available flights, choose a route, and book a ticket.
 
-### Advanced Configuration
+- **Viewing and Updating Bookings:**
+  - Passengers can view their booking history, update details, and reschedule/cancel bookings.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Staff Functionalities:
 
-### Deployment
+- **Login:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+  - Staff members log in using their credentials.
 
-### `npm run build` fails to minify
+- **Viewing and Managing Bookings:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  - Staff can view all bookings of passengers, search for a passenger, and find passengers on a particular flight.
+
+- **Managing Schedules:**
+
+  - Staff can create, update, or delete flight schedules.
+
+- **Extended Future Work:**
+  - The system has potential for extension, including staff, airline, and aircraft management, as well as dynamic updates to schedules.
+
+## Lessons Learned
+
+- **User-Centric Design:**
+
+  - Prioritize user experience for efficient system interaction.
+
+- **Backend Priority:**
+
+  - Allocate sufficient time for backend tasks for data consistency and functionality.
+
+- **Technical Expertise Gain:**
+  - Gain experience in Python, MySQL, React, Frontend and backend development.
+
+## Future Work
+
+- **Extended Staff Functionality:**
+  - Enhance staff capabilities for managing airlines, aircraft, and related entities.
+- **Airlines and Aircraft Management:**
+  - Incorporate comprehensive management of airlines and aircraft.
+- **Dynamic Flight Schedule Updates:**
+  - Implement real-time updates for flight schedules.
+- **Advanced Passenger Options:**
+  - Provide passengers with more booking options.
+- **Automated Seat Allocation:**
+  - Integrate an automated seat allocation system.
+- **Real-Time Analytics:**
+  - Implement real-time analytics for data-driven decisions.
+- **Enhanced Security Measures:**
+  - Strengthen security for sensitive data.
+
+## Sample Run
+
+---
+
+**Note:** Detailed instructions, screenshots, and sample runs can be added for better clarity.
