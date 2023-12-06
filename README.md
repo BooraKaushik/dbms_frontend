@@ -18,50 +18,54 @@ The Airlines Database Management System is designed to efficiently manage airlin
 
 ## Installation
 
-1. **Download the Project:**
+1.  **Download the Project:**
 
-   - Clone or download the project zip file to the local directory form the GitHub rpository links provided below.
-   - BACKEND: [BooraKSaiduH Backend Repo](https://github.com/shephzibah/dbms_backend)
-   - FRONTEND: [BooraKSaiduH Frontend Repo](https://github.com/BooraKaushik/dbms_frontend)
+    - Clone or download the project zip file to the local directory form the GitHub rpository links provided below.
+    - BACKEND: [BooraKSaiduH Backend Repo](https://github.com/shephzibah/dbms_backend)
+    - FRONTEND: [BooraKSaiduH Frontend Repo](https://github.com/BooraKaushik/dbms_frontend)
 
-2. **Install MySQL:**
+2.  **Install MySQL:**
 
-   - Download and install MySQL on your system.
+    - Download and install MySQL on your system.
 
-3. **Extract Files:**
+3.  **Extract Files:**
 
-   - Extract the downloaded project zip file.
+    - Extract the downloaded project zip file.
 
-4. **Install Backend Dependencies:**
-   - Open the terminal, and move into backend directory and run the following commands:
-     ```
-     pip install prettytable
-     pip install pymysql
-     ```
-5. **Install Frontend Dependencies:**
+4.  **Install Backend Dependencies:**
+    - Open the terminal, and move into backend directory and run the following commands:
+      ```
+      pip install prettytable
+      pip install pymysql
+      ```
+5.  **Install Frontend Dependencies:**
 
-   - Open the terminal, move into frontend directory and run the following command:
-     ```
-     npm install
-     ```
-     make sure you have node.js installed on your system.
+    - Open the terminal, move into frontend directory and run the following command:
+      ```
+      npm install
+      ```
+      make sure you have node.js installed on your system.
 
-6. **Database Setup:**
+6.  **Database Setup:**
 
-   - Run the SQL files (`project.sql`) in MySQL Workbench or terminal to create the database, procedures, triggers, and insert data.
+    - Run the SQL files (`project.sql`) in MySQL Workbench or terminal to create the database, procedures, triggers, and insert data.
 
-7. **Run the Backend Application:**
-   - Navigate to the project root directory in the terminal and move into backend directory.
-   - Run the command:
-     ```
-     python3 project.py
-     ```
-8. **Run the Frontend Application:**
-   - Navigate to the project root directory in the terminal and move into frontend directory.
-   - Run the command:
-     ```
-     npm start
-     ```
+7.  **Run the Backend Application:**
+    - Navigate to the project root directory in the terminal and move into backend directory.
+    - Run the command:
+      ```
+      <<<<<<< HEAD
+      python3 project.py
+      =======
+      python3 app.py
+      > > > > > > > 26e31d4455fb1c4751416e05f4e503ae912b7d67
+           ```
+8.  **Run the Frontend Application:**
+    - Navigate to the project root directory in the terminal and move into frontend directory.
+    - Run the command:
+      ```
+      npm start
+      ```
 
 ## System Usage
 
