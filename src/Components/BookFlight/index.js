@@ -3,6 +3,7 @@ import { API_URL } from "../Services/SignUpService";
 import axios from "axios";
 import { useNavigate } from "react-router";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 const BookFlight = () => {
   const dispatch = useDispatch();
@@ -71,6 +72,9 @@ const BookFlight = () => {
           <div className="alert alert-warning">{serverMessage.msg}</div>
         )}
         <form>
+          <div className="mb-3 d-flex flex-row-reverse">
+            <Link to="/cancel">Cancel/ Update</Link>
+          </div>
           <div className="row">
             <div className="col-3">
               <input
