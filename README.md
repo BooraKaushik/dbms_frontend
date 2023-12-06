@@ -136,6 +136,7 @@ The Airlines Database Management System is designed to efficiently manage airlin
     ![Login Invalid](Login_Invalid.png)
   - Login with Valid credentials,
     ![Login Valid](Login_valid.png)
+    **Note:**  Logging in with passenger's credentials would direct towards the initial booking page, logging in with staff credentials would redirect to schedules screen. Please use the following credentials for staff member as a staff member cant be created from frontend for security reasons. staff email: staff1@gmail.com, password: 1234
 - **Logged in as a Passenger:**
   - **Initial Booking Page:**
     ![Initial Booking Page](Login_Passenger_search.png)
@@ -152,7 +153,6 @@ The Airlines Database Management System is designed to efficiently manage airlin
   - **Reschedule Booking Page:**
     ![Reschedule Booking Page](Login_passenger_rechedule_ticket.png)
 - **Logged in as a Staff member:**
-
   - **Logging in as Staff member:**
     ![Logging in as Staff](Login_staff.png)
   - **Schedules Screen:**
@@ -176,4 +176,3 @@ The Airlines Database Management System is designed to efficiently manage airlin
   - **Registration Screen with validation errors:**
     ![Invalid details provided](Registration_invalid.png)
 
-**Note:** Detailed instructions, screenshots, and sample runs can be added for better clarity.
