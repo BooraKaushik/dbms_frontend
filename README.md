@@ -54,12 +54,8 @@ The Airlines Database Management System is designed to efficiently manage airlin
     - Navigate to the project root directory in the terminal and move into backend directory.
     - Run the command:
       ```
-      <<<<<<< HEAD
       python3 project.py
-      =======
-      python3 app.py
-      > > > > > > > 26e31d4455fb1c4751416e05f4e503ae912b7d67
-           ```
+      ```
 8.  **Run the Frontend Application:**
     - Navigate to the project root directory in the terminal and move into frontend directory.
     - Run the command:
