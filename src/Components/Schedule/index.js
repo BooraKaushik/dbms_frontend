@@ -95,7 +95,7 @@ const Schedule = () => {
         error: false,
         msg: response.data.message,
       });
-      navigate("/schedule");
+      window.location.reload();
     } else {
       setServerMessage({
         error: false,
@@ -133,7 +133,7 @@ const Schedule = () => {
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">
-                Edit Schedule
+                Add Schedule
               </h5>
               <button
                 type="button"

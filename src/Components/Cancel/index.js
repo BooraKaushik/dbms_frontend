@@ -63,7 +63,10 @@ const Cancel = () => {
           user_name: data.firstName + " " + data.lastName,
         }).then((data) => {
           if (data.success) {
-            navigate("/bookflight");
+            setServerMessage({ error: true, msg: "Reschedule success, please navigate to bookflight to book your new flight" });
+            setTimeout(() => {
+              navigate("/bookflight");
+            }, 2000);
           } else {
             setServerMessage({ error: true, msg: data?.message });
           }
