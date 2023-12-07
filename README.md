@@ -131,6 +131,48 @@ The Airlines Database Management System is designed to efficiently manage airlin
 
 ## Sample Run
 
----
+- **LOGIN:**
+  - Login with Invalid credentials,
+    ![Login Invalid](Login_Invalid.png)
+  - Login with Valid credentials,
+    ![Login Valid](Login_valid.png)
+    **Note:**  Logging in with passenger's credentials would direct towards the initial booking page, logging in with staff credentials would redirect to schedules screen. Please use the following credentials for staff member as a staff member cant be created from frontend for security reasons. staff email: staff1@gmail.com, password: 1234
+- **Logged in as a Passenger:**
+  - **Initial Booking Page:**
+    ![Initial Booking Page](Login_Passenger_search.png)
+  - **Flight Search:**
+    ![Flight Search Results](Login_passenger_flight_search.png)
+  - **Booking Details Confirmation Page:**
+    ![Booking Details Confirmation Page](Login_passenger_booking_verify_details.png)
+  - **Booking Confirmation Page:**
+    ![Booking Confirmation](Login_passenger_booking_confirmation.png)
+  - **Initial screen for Reschedule or Cancel:**
+    ![Reschedule or Cancel Inital Screen](Login_passenger_cancel_reschedule_screen.png)
+  - **Cancel Booking Page:**
+    ![Cancel Booking Page](Login_passenger_cancel_ticket.png)
+  - **Reschedule Booking Page:**
+    ![Reschedule Booking Page](Login_passenger_rechedule_ticket.png)
+- **Logged in as a Staff member:**
+  - **Logging in as Staff member:**
+    ![Logging in as Staff](Login_staff.png)
+  - **Schedules Screen:**
+    ![Schedule Screen](Login_staff_schedule.png)
+  - **Add Schedule Screen:**
+    ![Create Schedule](Login_staff_create_schedule.png)
+  - **Add Schedule Confirmation Screen:**
+    ![Add Schedule Confirmation](Login_staff_add_schedule_confirmation.png)
+  - **Edit/Cancel Schedule Initial Screen:**
+    ![Edit/Cancel Initial Screen](Login_staff_edit_cancel_initial.png)
+  - **Edit Schedule Screen:**
+    ![Edit Schedule](Login_staff_edit.png)
+  - **Edit Schedule Confirmation Screen:**
+    ![Edit Schedule Confirmation](Login_staff_edit_confirmation.png)
+  - **Cancel Schedule Screen:**
+    ![Cancel Schedule](Login_staff_edit_confirmation-1.png)
 
-**Note:** Detailed instructions, screenshots, and sample runs can be added for better clarity.
+- **Registration Screen:**
+  - **Valid details entered:**
+    ![Valid Registration](Registration_valid.png)
+  - **Registration Screen with validation errors:**
+    ![Invalid details provided](Registration_invalid.png)
+
